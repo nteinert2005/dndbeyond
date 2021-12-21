@@ -100,6 +100,8 @@ const VikingIcon = () => {
   );
 };
 
+export default {};
+
 module.exports = {
   CustomIcon: CustomIcon,
   DiceIcon: DiceIcon,
