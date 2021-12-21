@@ -119,7 +119,7 @@ const HomeNav = () => {
         >
           {RightNavBar.map((item, key) =>
             item.display !== false ? (
-              <a
+              <Link
                 onClick={() => {
                   if (dropdownTest === key) {
                     setDropdown(0);
@@ -144,13 +144,15 @@ const HomeNav = () => {
                       {item.submenu.length != "" &&
                         item.submenu.map((subItem, key) => (
                           <li>
-                            <Link href={subItem.link}>{subItem.name}</Link>
+                            <Link key={key} href={subItem.link}>
+                              {subItem.name}
+                            </Link>
                           </li>
                         ))}
                     </ul>
                   </>
                 ) : null}
-              </a>
+              </Link>
             ) : null
           )}
         </div>
