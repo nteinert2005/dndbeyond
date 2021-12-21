@@ -16,13 +16,11 @@ const PageHeader = ({ title, gameName }) => {
       </Head>
       <div className="page-header flex flex-row w-full justify-center items-center">
         <h1
-          className="inline-block"
+          className="inline-block float-left"
           style={{ width: "95%", color: "white", marginLeft: "-20px" }}
           id="header"
-          className="float-left"
         >
-          {" "}
-          {gameName}{" "}
+          {gameName}
         </h1>
         {/* <TokenCard tokens={session.user.data.tokens} />  */}
       </div>

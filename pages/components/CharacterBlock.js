@@ -9,8 +9,8 @@ const CharacterBlock = ({ dndcharacters }) => {
       <h2> My Characters </h2>
       {dndcharacters.length > 0 ? (
         <ul>
-          {dndcharacters.map((character) => (
-            <li className="flex">
+          {dndcharacters.map((key, character) => (
+            <li key={key} className="flex">
               <span className="w-10/12">{character.name}</span>
               <a className="w-2/12" href={`/characters/${character._id}`}>
                 <PencilIcon className="w-5 h-5" />
@@ -22,8 +22,7 @@ const CharacterBlock = ({ dndcharacters }) => {
         <div className="mt-5 card">
           <h1> No characters yet </h1>
           <span className="text-white">
-            {" "}
-            You can easily <a href="#">import your characters</a> or{" "}
+            You can easily <a href="#">import your characters</a> or
             <a href="#">create a new one here.</a>
           </span>
         </div>

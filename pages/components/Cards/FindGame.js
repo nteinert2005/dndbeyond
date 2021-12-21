@@ -1,3 +1,4 @@
+import Link from "next/link";
 import savedGames from "../../data/gameInfo";
 
 const FindGame = ({ myGames }) => {
@@ -11,7 +12,7 @@ const FindGame = ({ myGames }) => {
               savedGames.map((map1) => {
                 if (map1.name === game) {
                   return (
-                    <a
+                    <Link
                       href={game.link}
                       style={{
                         width: "31%",
@@ -35,12 +36,12 @@ const FindGame = ({ myGames }) => {
                       >
                         <h2>{map1.name} </h2>
                       </div>
-                    </a>
+                    </Link>
                   );
                 }
               })
             )}
-            <a
+            <Link
               href="/"
               style={{
                 width: "31%",
@@ -57,16 +58,15 @@ const FindGame = ({ myGames }) => {
               }}
             >
               See All Games
-            </a>
+            </Link>
           </div>
         </>
       ) : (
         <>
           <h2> Find your game </h2>
           <span className="mt-4 mb-4">
-            {" "}
-            We are constantly adding new games. So if you don't see one that fit
-            your TTRPG then, let us <a href="#"> know.</a>{" "}
+            We are constantly adding new games. So if you do not see one that
+            fit your TTRPG then, let us <a href="#"> know.</a>
           </span>
 
           <button

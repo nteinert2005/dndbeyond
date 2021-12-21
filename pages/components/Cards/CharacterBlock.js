@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import moment from "moment";
 import { PencilIcon } from "@heroicons/react/outline";
+import Link from "next/link";
 
 // const s = [
 //     {
@@ -28,8 +29,8 @@ const CharacterBlock = ({ dndcharacters }) => {
       {dndcharacters ? (
         <ul>
           {dndcharacters.length > 0 ? (
-            dndcharacters.map((character) => (
-              <li className="flex align-center justify-center">
+            dndcharacters.map((key, character) => (
+              <li key={key} className="flex align-center justify-center">
                 <div className="w-9/12 flex flex-col float-left">
                   <span className="text-lg"> {character.name} </span>
                   <span className="text-gray-500">
@@ -38,9 +39,9 @@ const CharacterBlock = ({ dndcharacters }) => {
                   </span>
                 </div>
                 <div className="relative w-3/12 float-right">
-                  <a href={`/characters/${character._id}`}>
+                  <Link href={`/characters/${character._id}`}>
                     <PencilIcon className="absolute right-0 w-5 h-5" />
-                  </a>
+                  </Link>
                 </div>
               </li>
             ))
@@ -60,7 +61,7 @@ const CharacterBlock = ({ dndcharacters }) => {
                 >
                   Add Character
                 </button>
-                <a
+                <Link
                   href="/dnd/importbeyond"
                   style={{
                     background: "#AFE7FF",
@@ -69,7 +70,7 @@ const CharacterBlock = ({ dndcharacters }) => {
                   className="text-black p-2 w-5/12 mt-6 inline-block text-center rounded"
                 >
                   Import from DNDB
-                </a>
+                </Link>
               </div>
             </div>
           )}
