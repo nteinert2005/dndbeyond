@@ -22,9 +22,7 @@ const TokenCard = ({ tokens }) => {
       className="flex items-center justify-center tokencard"
     >
       <span className="w-8/12 ml-2 float-left text-xl">
-        <span className="text-white">
-          {session.user.data.user.tokens + " "}
-        </span>
+        <span className="text-white">{tokens + " "}</span>
         Tokens
       </span>
       <button onClick={() => modalClick()} className="w-4/12 float-right">

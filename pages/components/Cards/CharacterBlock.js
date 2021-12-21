@@ -3,25 +3,6 @@ import moment from "moment";
 import { PencilIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 
-// const s = [
-//     {
-//         name: "Character #1",
-//         lvl: "1",
-//         race: "Druid",
-//         lastUpdated: "12/10/2021"
-//     }, {
-//         name: "Character #2",
-//         lvl: "1",
-//         race: "Druid",
-//         lastUpdated: "12/10/2021"
-//     }, {
-//         name: "Character #3",
-//         lvl: "1",
-//         race: "Druid",
-//         lastUpdated: "12/10/2021"
-//     }
-// ]
-
 const CharacterBlock = ({ dndcharacters }) => {
   return (
     <CharacterWrapper>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const CharacterDisplayBlock = ({ character }) => {
-  return (
+  return character ? (
     <FormWrapper className="flex flex-wrap py-7">
       <div className="w-full flex">
         <div className="w-6/12 mr-4 flex flex-col">
@@ -57,7 +57,7 @@ const CharacterDisplayBlock = ({ character }) => {
         </div>
       </div>
     </FormWrapper>
-  );
+  ) : null;
 };
 
 const FormWrapper = styled.form`

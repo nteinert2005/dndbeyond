@@ -26,7 +26,7 @@ export default function Dashboard() {
           <CharacterBlock dndcharacters={session.user.data.dndcharacters} />
         </div>
         <div className="mt-4 w-5/12 ml-4">
-          <TokenCard />
+          <TokenCard tokens={session.user.data.user.tokens} />
         </div>
       </div>
     </>
