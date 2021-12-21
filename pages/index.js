@@ -19,7 +19,10 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Epic Table - Premium TTRPG Resources</title>
-        <meta name="description" content="SkyKey - Premium TTRPG Resources" />
+        <meta
+          name="description"
+          content="Epic Table - Premium TTRPG Resources"
+        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
