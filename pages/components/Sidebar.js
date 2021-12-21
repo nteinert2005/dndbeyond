@@ -5,12 +5,6 @@ import {
   SearchIcon,
   CreditCardIcon,
 } from "@heroicons/react/outline";
-import {
-  CustomIcon,
-  DiceIcon,
-  CityMistIcon,
-  VikingIcon,
-} from "../components/customIcons";
 
 import { signOut } from "next-auth/react";
 import Link from "next/link";
@@ -48,19 +42,9 @@ const Sidebar = ({ test }) => {
           icon={<UserIcon className="h-5 w-5" />}
         />
         <Divider />
-        <GameIcon title="DND" href="/dnd" newgame={true} icon={<DiceIcon />} />
-        <GameIcon
-          title="City of Mist"
-          href="/cityofmist"
-          newgame={true}
-          icon={<CityMistIcon />}
-        />
-        <GameIcon
-          title="Vikings"
-          href="/vikings"
-          newgame={true}
-          icon={<VikingIcon />}
-        />
+        <GameIcon title="DND" href="/dnd" newgame={true} />
+        <GameIcon title="City of Mist" href="/cityofmist" newgame={true} />
+        <GameIcon title="Vikings" href="/vikings" newgame={true} />
         <Divider />
         <GameIcon
           title="Wallet"

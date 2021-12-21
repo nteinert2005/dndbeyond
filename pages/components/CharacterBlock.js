@@ -9,7 +9,7 @@ const CharacterBlock = ({ dndcharacters }) => {
       <h2> My Characters </h2>
       {dndcharacters.length > 0 ? (
         <ul>
-          {dndcharacters.map((key, character) => (
+          {dndcharacters.map((character, key) => (
             <li key={key} className="flex">
               <span className="w-10/12">{character.name}</span>
               <a className="w-2/12" href={`/characters/${character._id}`}>

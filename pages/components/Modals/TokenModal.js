@@ -36,7 +36,7 @@ const TokenModal = ({ show, closeModal }) => {
         </span>
 
         <ul className="flex mt-4 flex-row flex-wrap">
-          {tokenAmount.map((key, item) => (
+          {tokenAmount.map((item, key) => (
             <li
               key={key}
               className="p-5 rounded w-full md:w-5/12 m-2 text-lg text-center hover:text-black"

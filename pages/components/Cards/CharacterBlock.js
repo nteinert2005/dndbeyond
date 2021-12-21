@@ -29,7 +29,7 @@ const CharacterBlock = ({ dndcharacters }) => {
       {dndcharacters ? (
         <ul>
           {dndcharacters.length > 0 ? (
-            dndcharacters.map((key, character) => (
+            dndcharacters.map((character, key) => (
               <li key={key} className="flex align-center justify-center">
                 <div className="w-9/12 flex flex-col float-left">
                   <span className="text-lg"> {character.name} </span>
