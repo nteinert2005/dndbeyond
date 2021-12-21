@@ -104,7 +104,7 @@ const HomeNav = () => {
             ) : null
           )}
         </div>
-        <a href="/">
+        <Link href="/">
           <h1 className="text-white text-2xl font-bold flex items-center">
             <img
               src="./favicon.ico"
@@ -112,7 +112,7 @@ const HomeNav = () => {
             />
             Epic Table
           </h1>
-        </a>
+        </Link>
         <div
           style={{ height: "60px", marginTop: "0px" }}
           className="flex items-center space-x-3"
@@ -143,10 +143,8 @@ const HomeNav = () => {
                     >
                       {item.submenu.length != "" &&
                         item.submenu.map((subItem, key) => (
-                          <li>
-                            <Link key={key} href={subItem.link}>
-                              {subItem.name}
-                            </Link>
+                          <li key={key}>
+                            <Link href={subItem.link}>{subItem.name}</Link>
                           </li>
                         ))}
                     </ul>
