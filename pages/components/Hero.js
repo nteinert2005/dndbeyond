@@ -1,6 +1,7 @@
 const Hero = () => {
   return (
     <div
+      id="home"
       style={{ marginTop: "-70px", paddingTop: "100px" }}
       className="bg-black"
     >
@@ -8,7 +9,7 @@ const Hero = () => {
         <div className="w-11/12 sm:w-2/3 mb-5 sm:mb-10">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-white font-extrabold leading-tight">
             The Freedom to Create the
-            <span className="text-red-700"> Characters </span>
+            <span className="text-themegold"> Characters </span>
             You Want
           </h1>
           <p className="mt-5 sm:mt-10 text-gray-600 font-normal text-center text-lg sm:text-lg">
@@ -26,7 +27,7 @@ const Hero = () => {
           >
             Join Us On Discord
           </a>
-          <button className="w-full mt-2 md:mt-0 ml-0 md:ml-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 bg-white transition duration-150 ease-in-out rounded border border-indigo-700 text-red-900 px-4 sm:px-10 py-2 sm:py-4 text-sm">
+          <button className="w-full mt-2 md:mt-0 ml-0 md:ml-4 focus:outline-none bg-themegold transition duration-150 ease-in-out rounded border border-themegold text-black px-4 sm:px-10 py-2 sm:py-4 text-sm">
             Get Notifications
           </button>
         </div>

@@ -1,0 +1,13 @@
+#home a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#home button {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#home h1 {
+  font-size: 40px;
+}

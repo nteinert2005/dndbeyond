@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 body {
-    font-size: 16px;
-    background: #14141A;
+  font-size: 16px;
+  background: #14141a;
 }
 
-h1 {
+/* h1 {
     font-size: 1.5rem !important;
     font-weight: normal;
     letter-spacing: 2px;
@@ -29,31 +29,31 @@ h5 {
     color: white;
     font-size: 1.1em;
     line-height: 120%;
-}
+} */
 
 .tokencard button {
-    border: 1px solid white;
-    padding: 5px 15px;
-    margin-left: 20px;
-    border-radius: 8px;
+  border: 1px solid white;
+  padding: 5px 15px;
+  margin-left: 20px;
+  border-radius: 8px;
 }
 
 .card {
-    background: #1E1E27;
-    padding: 2em;
+  background: #1e1e27;
+  padding: 2em;
 }
 
 .btn {
-    padding: 16px 30px;
-    border-radius: 15px;
-    display: inline-block;
+  padding: 16px 30px;
+  border-radius: 15px;
+  display: inline-block;
 }
 
 .btn-primary {
-    border: 1px solid white;
-    color: white;
+  border: 1px solid white;
+  color: white;
 }
 
 a {
-    text-decoration: underline;
+  text-decoration: underline;
 }

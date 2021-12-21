@@ -68,6 +68,11 @@ const RightNavBar = [
     name: "Login",
     submenu: null,
   },
+  {
+    link: "/publishers",
+    name: "Publishers",
+    submenu: null,
+  },
 ];
 
 const HomeNav = () => {
@@ -92,7 +97,13 @@ const HomeNav = () => {
             ) : null
           )}
         </div>
-        <h1 className="text-white text-2xl font-bold"> Epic Table </h1>
+        <h1 className="text-white text-2xl font-bold flex items-center">
+          <img
+            src="./favicon.ico"
+            style={{ width: "20px", height: "25px", marginRight: "5px" }}
+          />{" "}
+          Epic Table
+        </h1>
         <div
           style={{ height: "60px", marginTop: "10px" }}
           className="flex items-center space-x-3"

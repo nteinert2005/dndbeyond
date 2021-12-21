@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        themegold: "#6D61F3",
+        themegold: "#FED32C",
         discordblue: "#1B1C26",
         discordblack: "#1B1C26",
         newbg: "#1B1C26",
