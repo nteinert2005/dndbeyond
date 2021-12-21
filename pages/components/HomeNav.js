@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { ChevronDownIcon } from "@heroicons/react/outline";
+import { useState } from "react";
+import Link from "next/link";
 
 const LeftNavBar = [
   {
@@ -43,7 +45,16 @@ const RightNavBar = [
   {
     link: "#",
     name: "Games",
-    submenu: {},
+    submenu: [
+      {
+        name: "DND",
+        link: "/dnd",
+      },
+      {
+        name: "City of Mist",
+        link: "/cityofmist",
+      },
+    ],
   },
   {
     link: "#",
@@ -54,12 +65,6 @@ const RightNavBar = [
   {
     link: "#",
     name: "Shows",
-    submenu: null,
-    display: false,
-  },
-  {
-    link: "#",
-    name: "About",
     submenu: null,
     display: false,
   },
@@ -76,6 +81,8 @@ const RightNavBar = [
 ];
 
 const HomeNav = () => {
+  const [dropdownTest, setDropdown] = useState(0);
+
   return (
     <div style={{ background: "#14141a" }}>
       <NavbarWrapper
@@ -83,7 +90,7 @@ const HomeNav = () => {
         className="flex px-8 justify-center items-center"
       >
         <div
-          style={{ height: "60px", marginTop: "10px" }}
+          style={{ height: "60px", marginTop: "0px" }}
           className="flex items-center space-x-3"
         >
           {LeftNavBar.map((item) =>
@@ -97,23 +104,51 @@ const HomeNav = () => {
             ) : null
           )}
         </div>
-        <h1 className="text-white text-2xl font-bold flex items-center">
-          <img
-            src="./favicon.ico"
-            style={{ width: "20px", height: "25px", marginRight: "5px" }}
-          />{" "}
-          Epic Table
-        </h1>
+        <a href="/">
+          <h1 className="text-white text-2xl font-bold flex items-center">
+            <img
+              src="./favicon.ico"
+              style={{ width: "20px", height: "25px", marginRight: "5px" }}
+            />
+            Epic Table
+          </h1>
+        </a>
         <div
-          style={{ height: "60px", marginTop: "10px" }}
+          style={{ height: "60px", marginTop: "0px" }}
           className="flex items-center space-x-3"
         >
-          {RightNavBar.map((item) =>
+          {RightNavBar.map((item, key) =>
             item.display !== false ? (
-              <a href={item.link} className="block">
+              <a
+                onClick={() => {
+                  if (dropdownTest === key) {
+                    setDropdown(0);
+                  } else {
+                    setDropdown(key);
+                  }
+                }}
+                key={key}
+                style={{ position: "relative" }}
+                href={item.link}
+                className="block"
+              >
                 {item.name}{" "}
                 {item.submenu !== null ? (
-                  <ChevronDownIcon className="h-3 w-3" />
+                  <>
+                    <ChevronDownIcon className="h-3 w-3" />
+                    <ul
+                      className={`dropdown ${
+                        dropdownTest === key ? "open" : ""
+                      }`}
+                    >
+                      {item.submenu.length != "" &&
+                        item.submenu.map((subItem, key) => (
+                          <li>
+                            <Link href={subItem.link}>{subItem.name}</Link>
+                          </li>
+                        ))}
+                    </ul>
+                  </>
                 ) : null}
               </a>
             ) : null
@@ -129,7 +164,6 @@ const NavbarWrapper = styled.nav`
 
   a {
     font-weight: 800;
-    font-family: "Josefin Sans";
     text-decoration: none;
     color: white;
     padding: 0 12px;
