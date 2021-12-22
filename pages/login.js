@@ -2,7 +2,7 @@ import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Login() {
+function Login() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
@@ -66,3 +66,9 @@ export default function Login() {
     </div>
   );
 }
+
+Login.getInitialProps = async (ctx) => {
+  return {};
+};
+
+export default Login;
