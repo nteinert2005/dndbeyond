@@ -84,7 +84,7 @@ const HomeNav = () => {
         >
           {RightNavBar.map((item, key) =>
             session && item.name === "Login" ? (
-              <a href="/dashboard"> Dashboard </a>
+              <Link href="/dashboard"> Dashboard </Link>
             ) : item.display !== false || item.name !== "games" ? (
               <a
                 onClick={() => {
