@@ -56,7 +56,10 @@ export default function Login() {
             LOGIN
           </button>
           <span className="mt-4">
-            Need an account? <Link href="/register">Register </Link>
+            Need an account?{" "}
+            <Link as="/register" href="/register">
+              Register{" "}
+            </Link>
           </span>
         </form>
       </div>

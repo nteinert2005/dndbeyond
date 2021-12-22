@@ -80,7 +80,7 @@ const FindGame = ({ myGames }) => {
           <h2> Find your game </h2>
           <span className="mt-4 mb-4">
             We are constantly adding new games. So if you do not see one that
-            fit your TTRPG then, let us <a href="#"> know.</a>
+            fit your TTRPG then, let us <Link href="/moregames"> know.</Link>
           </span>
 
           <button

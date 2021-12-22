@@ -53,7 +53,7 @@ export default function Register() {
         >
           <h1 className="text-3xl mb-4 font-bold uppercase inline-block text-center">
             {" "}
-            SkyKey{" "}
+            Epic Table{" "}
           </h1>
           <span className="text-center p-2"> Register for an account </span>
           {error !== null ? (
@@ -66,7 +66,9 @@ export default function Register() {
           {success ? (
             <span className="bg-green-400 p-2 my-2 text-white text-center">
               You have created your account!{" "}
-              <Link href="/login">Login here. </Link>
+              <Link as="/login" href="/login">
+                Login here.{" "}
+              </Link>
             </span>
           ) : (
             ""
@@ -106,7 +108,10 @@ export default function Register() {
             REGISTER
           </button>
           <span className="mt-4">
-            Already have account? <Link href="/login">Login </Link>
+            Already have account?{" "}
+            <Link as="/login" href="/login">
+              Login{" "}
+            </Link>
           </span>
         </form>
       </div>

@@ -5,22 +5,9 @@ import Link from "next/link";
 
 const LeftNavBar = [
   {
-    link: "#",
+    link: "/aboutus",
     name: "About Us",
     submenu: null,
-  },
-
-  {
-    link: "#",
-    name: "Gear",
-    submenu: null,
-    display: false,
-  },
-  {
-    link: "#",
-    name: "Gear",
-    submenu: null,
-    display: false,
   },
   {
     link: "/register",
@@ -30,18 +17,6 @@ const LeftNavBar = [
 ];
 
 const RightNavBar = [
-  {
-    link: "#",
-    name: "Forums",
-    submenu: null,
-    display: false,
-  },
-  {
-    link: "#",
-    name: "Media",
-    submenu: null,
-    display: false,
-  },
   {
     link: "#",
     name: "Games",
@@ -57,18 +32,6 @@ const RightNavBar = [
     ],
   },
   {
-    link: "#",
-    name: "News",
-    submenu: null,
-    display: false,
-  },
-  {
-    link: "#",
-    name: "Shows",
-    submenu: null,
-    display: false,
-  },
-  {
     link: "/login",
     name: "Login",
     submenu: null,
@@ -81,7 +44,7 @@ const RightNavBar = [
 ];
 
 const HomeNav = () => {
-  const [dropdownTest, setDropdown] = useState(0);
+  const [dropdownTest, setDropdown] = useState(false);
 
   return (
     <div style={{ background: "#14141a" }}>
@@ -104,7 +67,7 @@ const HomeNav = () => {
             ) : null
           )}
         </div>
-        <Link href="/">
+        <Link as="/" href="/test">
           <h1 className="text-white text-2xl font-bold flex items-center">
             <img
               src="./favicon.ico"
@@ -118,11 +81,11 @@ const HomeNav = () => {
           className="flex items-center space-x-3"
         >
           {RightNavBar.map((item, key) =>
-            item.display !== false ? (
-              <Link
+            item.display !== false || item.name !== "games" ? (
+              <a
                 onClick={() => {
                   if (dropdownTest === key) {
-                    setDropdown(0);
+                    setDropdown(false);
                   } else {
                     setDropdown(key);
                   }
@@ -150,7 +113,7 @@ const HomeNav = () => {
                     </ul>
                   </>
                 ) : null}
-              </Link>
+              </a>
             ) : null
           )}
         </div>

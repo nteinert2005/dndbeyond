@@ -83,7 +83,7 @@ const GameIcon = ({ icon, action, title, href, newgame }) =>
       </GameIconWrapper>
     )
   ) : (
-    <Link href={href}>
+    <Link as={href} href={href}>
       <GameIconWrapper>
         {newgame && <Notify> New </Notify>}
         {icon}
