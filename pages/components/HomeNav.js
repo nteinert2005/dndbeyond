@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { ChevronDownIcon } from "@heroicons/react/outline";
 import { useState } from "react";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 const LeftNavBar = [
   {
@@ -45,6 +46,7 @@ const RightNavBar = [
 
 const HomeNav = () => {
   const [dropdownTest, setDropdown] = useState(false);
+  const { data: session, status } = useSession();
 
   return (
     <div style={{ background: "#14141a" }}>
@@ -81,7 +83,9 @@ const HomeNav = () => {
           className="flex items-center space-x-3"
         >
           {RightNavBar.map((item, key) =>
-            item.display !== false || item.name !== "games" ? (
+            session && item.name === "Login" ? (
+              <a href="/dashboard"> Dashboard </a>
+            ) : item.display !== false || item.name !== "games" ? (
               <a
                 onClick={() => {
                   if (dropdownTest === key) {
@@ -148,5 +152,15 @@ const NavbarWrapper = styled.nav`
     padding-left: 50px;
   }
 `;
+
+export async function getServerSideProps(context) {
+  const session = await getSession(context);
+
+  return {
+    props: {
+      session: await getSession(context),
+    },
+  };
+}
 
 export default HomeNav;
