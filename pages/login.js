@@ -11,7 +11,7 @@ function Login() {
     signIn("username-login", {
       username: username,
       password: password,
-      callbackUrl: `${window.location.origin}/dashboard`,
+      callbackUrl: `${process.env.NEXTAUTH_URL}/dashboard`,
     });
   };
 
