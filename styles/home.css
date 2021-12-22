@@ -11,3 +11,10 @@
 #home h1 {
   font-size: 40px;
 }
+
+#home h4 {
+  font-size: 20px;
+  color: #ba991e;
+  text-transform: uppercase;
+  font-weight: 800;
+}
