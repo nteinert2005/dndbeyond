@@ -3,7 +3,7 @@ import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Register() {
+function Register() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
   const [email, setEmail] = useState();
@@ -118,3 +118,9 @@ export default function Register() {
     </div>
   );
 }
+
+Register.getInitialProps = async (ctx) => {
+  return {};
+};
+
+export default Register;
