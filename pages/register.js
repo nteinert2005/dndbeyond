@@ -108,10 +108,7 @@ function Register() {
             REGISTER
           </button>
           <span className="mt-4">
-            Already have account?{" "}
-            <Link as="/login" href="/login">
-              Login{" "}
-            </Link>
+            Already have account? <Link href="/login">Login </Link>
           </span>
         </form>
       </div>
